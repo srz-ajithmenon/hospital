@@ -4,8 +4,9 @@
     color: rgb(255, 0, 0);
     font-weight: bold;
     border-color: rgba(255, 0, 0, 0.5);
+    min-width: 80px;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
 }
 .outlined:hover {
     border-color: rgb(255, 0, 0);
@@ -18,7 +19,8 @@
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
+    min-width: 80px;
 }
 .contained:hover {
     background-color: rgb(8, 209, 4);
@@ -30,7 +32,8 @@
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
+    min-width: 80px;
 }
 .simple:hover {
     background-color: rgba(48, 48, 48, 0.437);

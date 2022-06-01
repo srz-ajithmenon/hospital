@@ -16,12 +16,36 @@ function Registration(props) {
     return (
         <div className="centers">
                 <form  className="forms">
-                    <Inputbox type="text" name="name" label="Name" placeholder="Enter your Name" handleChange={handleChange} /> <br/>
-                    <Inputbox type="email" name="email" label="Email id" placeholder="Enter your Email id" handleChange={handleChange} /> <br/>
-                    <Inputbox type="number" name="phone" label="Phone No." placeholder="Enter your Phone No." handleChange={handleChange} /> <br/>
-                    <Inputbox type="text" name="address" label="Address" placeholder="Enter your Address" handleChange={handleChange} /> <br/>
-                    <div  className="button">
-                        <SubmitButton classname="contained" name="Submit" handleClick={handleClick}/>
+                    <Inputbox
+                        type="text" 
+                        name="name" 
+                        label="Name" 
+                        placeholder="Enter your Name" 
+                        handleChange={handleChange} 
+                    /> <br/>
+                    <Inputbox 
+                        type="email" 
+                        name="email" 
+                        label="Email id" 
+                        placeholder="Enter your Email id" 
+                        handleChange={handleChange} 
+                    /> <br/>
+                    <Inputbox 
+                        type="number" 
+                        name="phone" 
+                        label="Phone No." 
+                        placeholder="Enter your Phone No." 
+                        handleChange={handleChange} 
+                    /> <br/>
+                    <Inputbox 
+                        type="text" 
+                        name="address" 
+                        label="Address" 
+                        placeholder="Enter your Address" 
+                        handleChange={handleChange} 
+                    /> <br/>
+                    <div className="button">
+                        <SubmitButton varient="contained" label="Submit" handleClick={handleClick}/>
                     </div>
                 </form>
         </div>

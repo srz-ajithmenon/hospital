@@ -7,11 +7,9 @@ function SubmitButton(props) {
         props.handleClick()
         event.preventDefault();
     } 
-    return (
-        <div>
-            <button className={props.classname} onClick={handleClick} > {props.name} </button>
-        </div>
+    return (       
+        <button className={props.varient || "contained"} onClick={handleClick} > {props.label} </button>
     );
 }
-    
+
 export default SubmitButton

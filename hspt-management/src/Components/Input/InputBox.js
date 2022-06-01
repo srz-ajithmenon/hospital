@@ -4,8 +4,8 @@ import './input.css'
 
 function Inputbox(props) {
     const handleChange = (event) =>{
-        var name=event.target.name 
-        props.handleChange(name,event.target.value)
+        const {name, value } = event.target
+        props.handleChange(name,value)
     }
     return (
         <div className="ascolumn">
