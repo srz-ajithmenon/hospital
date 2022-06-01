@@ -1,0 +1,66 @@
+.layover {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.divcenter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divright{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+button{
+    /* border: none; */
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.submit{
+    background-color: rgb(1, 184, 1);
+}
+.submit:hover{
+    background-color: rgb(3, 236, 3);
+}
+.cancel{
+    background-color: rgb(194, 2, 2);
+}
+.cancel:hover{
+    background-color: rgb(239, 2, 2);
+}
+.reset{
+    background-color: rgb(215, 215, 215);
+}
+.reset:hover{
+    background-color: rgb(255, 255, 255);
+}
