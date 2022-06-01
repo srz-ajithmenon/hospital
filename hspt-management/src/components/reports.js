@@ -1,14 +1,19 @@
 import React from 'react'
-import Table from './table'
+import Table from './Table/table'
 
 export const Button = (props) => {
-  //  const handleChange = (event) => {
-  //    alert("Edit")
-  //  }
     return(
       <button onClick={ props.handleClick }>
-        <svg fill="none" viewBox="0 0 24 24" stroke="#0f2c69" strokeWidth={2} width="20">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        <svg fill="none" 
+             viewBox="0 0 24 24" 
+             stroke="#0f2c69" 
+             strokeWidth={2} 
+             width="20"
+        >
+          <path strokeLinecap="round" 
+                strokeLinejoin="round" 
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" 
+          />
         </svg>
       </button>
     )
@@ -17,10 +22,14 @@ export const Button = (props) => {
 const handleClick = (data) => () => {
   console.log("Button Clicked",data)
 }
+
 const getContent = (rawData) => 
         rawData.map(item => (
-          {...item, edit: <Button handleClick={handleClick(item)}/>}
-        ))
+          {
+            ...item, 
+            edit: <Button handleClick={handleClick(item)}/>
+          }
+))
       
 const Reports = () => {
     const [appointmentList] = React.useState({
@@ -39,7 +48,6 @@ const Reports = () => {
             specialist:'Dr.Andrew',
             speciality:'Cardiology',
             reports:'Reports',
-            // edit: <Button/>
           },
           {
             token:'23012',
@@ -47,7 +55,6 @@ const Reports = () => {
             specialist:'Dr.Pete',
             speciality:'Nuerology',
             reports:'Reports',
-            // edit: <Button/>
           },
           {
             token:'23013',
@@ -55,8 +62,6 @@ const Reports = () => {
             specialist:'Dr.Samuel',
             speciality:'Surgery',
             reports:'Reports',
-            // edit: <Button/>
-
           },
           {
             token:'23014',
@@ -64,15 +69,12 @@ const Reports = () => {
             specialist:'Dr.Andrew',
             speciality:'Cardiology',
             reports:'Reports',
-            // edit: <Button/>
-
           },{
             token:'23015',
             visit_date:'30-05-2022',
             specialist:'Dr.Issac',
             speciality:'ENT',
             reports:'Reports',
-            // edit: <Button/>
           }
         ]
     })
@@ -82,7 +84,6 @@ const Reports = () => {
                 label="Patient's Appointment Record" 
                 head={appointmentList.headingLabel} 
                 data={getContent(appointmentList.patientAppointmentsList)}
-
         />
     </div>
   )
