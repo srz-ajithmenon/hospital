@@ -1,0 +1,31 @@
+.ascolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: 3px;
+}
+
+.normal {
+    background-color: rgba(0, 0, 0, 0);
+    width: 300px;
+    height: 30px;
+    border: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    padding: 5px;
+}
+.normal:active {
+    border: 1px;
+}
+
+.underline{
+    background-color: rgba(0, 0, 0, 0);
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    /* text-decoration-line: underline; */
+}

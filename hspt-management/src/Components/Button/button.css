@@ -1,0 +1,37 @@
+.outlined {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    border-color: rgba(255, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 8px;
+}
+.outlined:hover {
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contained {
+    background-color: rgb(3, 156, 1);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+.contained:hover {
+    background-color: rgb(8, 209, 4);
+}
+
+.simple {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+.simple:hover {
+    background-color: rgba(48, 48, 48, 0.437);
+}
