@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from './table'
+import Table from './Table/table'
 
 export const Button = (props) => {
     return(
@@ -22,10 +22,14 @@ export const Button = (props) => {
 const handleClick = (data) => () => {
   console.log("Button Clicked",data)
 }
+
 const getContent = (rawData) => 
         rawData.map(item => (
-          {...item, edit: <Button handleClick={handleClick(item)}/>}
-        ))
+          {
+            ...item, 
+            edit: <Button handleClick={handleClick(item)}/>
+          }
+))
       
 const Reports = () => {
     const [appointmentList] = React.useState({
