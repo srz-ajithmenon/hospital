@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Home from './Components/Home';
 import Selectfields from './Components/Selectfields'; 
 import Registration from './Components/Registration';
-import Reports from './components/reports';
+import Reports from './Components/reports';
 
 function App() {
   return (
