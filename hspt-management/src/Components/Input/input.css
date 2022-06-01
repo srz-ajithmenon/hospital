@@ -19,7 +19,6 @@ label {
 }
 .normal:focus {
     outline: none;
-    background-color: aqua;
 }
 
 /* .underline{
