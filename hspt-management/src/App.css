@@ -12,3 +12,43 @@
   color: white;
 }
 
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h2{
+  color:#797b80;
+  margin: 3%;
+}
+#tableId {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+}
+
+#tableId td, #tableId th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tableId tr:nth-child(even){background-color: #f2f2f2;}
+
+#tableId tr:hover {background-color: #ddd;}
+
+#tableId th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #0f2c69;
+  color: white;
+}
