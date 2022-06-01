@@ -1,0 +1,25 @@
+
+
+.imgg{
+    margin-left: 30px;
+    width: 250px;
+   }
+
+   .htag{
+    color: #004b73;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-left: 2rem;
+   }
+
+   .firstpart{
+    width:fit-content;
+    background-color:white;
+    height: 110px;
+    display: flex;
+    align-items: center;
+   }
+
+
+
+   
