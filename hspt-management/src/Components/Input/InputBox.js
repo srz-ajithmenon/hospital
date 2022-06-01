@@ -1,0 +1,24 @@
+import React, { useState } from "react";
+
+import './input.css'
+
+function Inputbox(props) {
+    const handleChange = (event) =>{
+        const {name, value } = event.target
+        props.handleChange(name,value)
+    }
+    return (
+        <div className="ascolumn">
+            <label>{props.label}</label>
+            <input 
+                type={props.type} 
+                name={props.name} 
+                placeholder={props.placeholder} 
+                className="normal" 
+                onChange={handleChange}
+            />
+        </div>
+    );
+}
+    
+export default Inputbox
