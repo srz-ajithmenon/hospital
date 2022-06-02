@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Input from './Input/InputBox'
-import Button from './Button/submitButton'
+import Button from './Button/SubmitButton'
 import { loginAction } from '../Redux/login/loginAction'
 
-import '../Designs/login.css'
+import '../designs/login.css'
 
 const Login = (props) => {
 

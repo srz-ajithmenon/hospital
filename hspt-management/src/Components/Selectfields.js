@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../Designs/design.css";
+import "../designs/design.css";
 
 function Selectfields (props) {
 

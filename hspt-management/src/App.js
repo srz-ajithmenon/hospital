@@ -3,9 +3,9 @@ import './App.css';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
-import Home from './Components/home';
-import Selectfields from './Components/selectFields'; 
-import Registration from './Components/registration';
+import Home from './Components/Home';
+import Selectfields from './Components/Selectfields'; 
+import Registration from './Components/Registration';
 import Reports from './Components/reports';
 import Login from './Components/login';
 

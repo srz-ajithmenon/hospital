@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
 import Inputbox from "./Input/InputBox";
-import SubmitButton from "./Button/submitButton";
-import '../Designs/pages.css'
+import SubmitButton from "./Button/SubmitButton";
+import '../designs/pages.css'
 
 function Registration(props) {
     const [udata, setUser] = useState({name:"", email:"", phone:"", address:""})
