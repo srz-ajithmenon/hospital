@@ -4,7 +4,7 @@
     color: rgb(255, 0, 0);
     font-weight: bold;
     border-color: rgba(255, 0, 0, 0.5);
-    min-width: 80px;
+    min-width: 150px;
     border-radius: 5px;
     padding: 10px;
 }
@@ -20,7 +20,7 @@
     border: none;
     border-radius: 5px;
     padding: 10px;
-    min-width: 80px;
+    min-width: 150px;
 }
 .contained:hover {
     background-color: rgb(8, 209, 4);
@@ -30,10 +30,10 @@
     background-color: rgba(0, 0, 0, 0);
     color: rgb(0, 0, 0);
     font-weight: bold;
-    border: none;
+    border: 1px;
     border-radius: 5px;
     padding: 10px;
-    min-width: 80px;
+    min-width: 150px;
 }
 .simple:hover {
     background-color: rgba(48, 48, 48, 0.437);

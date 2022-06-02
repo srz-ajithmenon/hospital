@@ -18,7 +18,7 @@
   .selname{
     height: 45px;
     border-radius: 5px;
-    width: 510px;
+    width: 100%;
     margin-top: 10px;
 }
 .smalldiv{
@@ -26,6 +26,6 @@
 }
 .select {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
 }
   

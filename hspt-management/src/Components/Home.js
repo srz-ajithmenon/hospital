@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Selectfields from "./Selectfields";
-import "../Design/design.css";
+import Selectfields from "./selectFields";
+import "../Designs/design.css";
 
 function Home(props) {
     const[sdata,setupdate]=useState ({
