@@ -1,22 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Input from './Input/InputBox'
-import Button from './Button/SubmitButton'
-import { loginAction } from '../Redux/login/loginAction'
+import Input from '../input/inputBox'
+import Button from '../button/submitButton'
+import { loginAction } from '../../Redux/loginRedux/loginAction'
+import { useNavigate } from 'react-router-dom'
 
-import '../designs/login.css'
+import '../../designs/login.css'
 
 const Login = (props) => {
-
-  const [user,setUser] = React.useState({
-      name: "",
-      password: ""
-    })
+  const [user,setUser] = React.useState({})
+  const [error,setError] =React.useState(
+    {name:"This field is required"}
+    )
+  const navigate= useNavigate()
 
   const handleClick = () => {
-    console.log("------",user)
+    //validation fun call
     props.loginAction(user);
-    // event.preventDefault();
   }
 
   const handleChange = (name, value) => {
@@ -24,17 +24,27 @@ const Login = (props) => {
       ...user,
       [name]: value,
     })
-    console.log(name, value)
   }
 
+  if(props.isAuthUser){
+    localStorage.setItem('user',props.userRes.name)
+    localStorage.setItem('isAuth',true)
+    props.handleAuth(props.isAuthUser)
+    navigate('/report')
+  }
+  
   return (
     <div className='classLogin'>
+      <h1>Login</h1>
+      {console.log(props.isAuthUser)}
       <div className='componentDiv'>
         <Input 
           type="text" 
           name="name" 
-          label="User Name" 
-          placeholder="Enter user name" 
+          value={user.name}
+          errorMsg= {error.name}
+          label="Username" 
+          placeholder="Enter username" 
           handleChange={handleChange}
         />
       </div>
@@ -58,7 +68,13 @@ const Login = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {}
+const mapStateToProps = (state) => {
+  return{
+    userRes: state.loginReducer.user,
+    type: state.loginReducer.type,
+    isAuthUser: state.loginReducer.isAuthUser
+  }
+}
 
 const mapDispatchToProps = (dispatch) =>{
   return {

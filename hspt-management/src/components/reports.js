@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from './Table/table'
+import Table from './table/table'
 
 export const Button = (props) => {
     return(

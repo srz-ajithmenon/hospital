@@ -1,26 +1,36 @@
 import './App.css';
 
+import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
-import Home from './Components/Home';
-import Selectfields from './Components/Selectfields'; 
-import Registration from './Components/Registration';
-import Reports from './Components/reports';
-import Login from './Components/login';
+import Home from './components/home';
+import Registration from './components/registration';
+import Reports from './components/reports';
+import Login from './components/login/login';
+import { PrivateRoute } from './components/privateRoute';
 
 function App() {
+  const [isAuth,setAuth] = React.useState(false);
+  
+  const authenticate = (isAuthUser) =>{
+      setAuth(isAuthUser)
+      console.log(isAuthUser)
+  }
+  
   return (
     <Provider store={store}>
       <div>
+        {console.log(isAuth)}
         <BrowserRouter>
           <div>
             <Routes>
-              <Route path = "/" element={ <Login/> } />
+              <Route exact path='/' element={<PrivateRoute isAuth={isAuth}/>}>
+                <Route exact path='/report' element={<Reports/>}/>
+              </Route>
+              <Route path = "/login" element={ <Login handleAuth= {authenticate}/> } />
               <Route path = "/register" element={ <Registration/> } />
-              <Route path = "/report" element={ <Reports/> } />
-              <Route path = "/home" element={ <Home/> } />
-              <Route path = "/select" element={ <Selectfields/> } />
+              <Route exact path = "/home" element={ <Home/> } />
             </Routes>
           </div>
         </BrowserRouter>

@@ -17,6 +17,9 @@ function Inputbox(props) {
                 className="normal" 
                 onChange={handleChange}
             />
+            <div>
+            {props.errorMsg}
+            </div>
         </div>
     );
 }
