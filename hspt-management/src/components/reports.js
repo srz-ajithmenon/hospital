@@ -115,6 +115,7 @@ const Reports = () => {
             shouldShowPopup = { mstate } 
             toggleModal = { toggleModal }
             userdata={userdata} 
+            formFields={formFields}
             handleSubmit={handleSubmit} 
         />
 
