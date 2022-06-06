@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Input from '../input/inputBox'
-import Button from '../button/submitButton'
+import Input from '../Input/InputBox'
+import Button from '../Button/SubmitButton'
 import { loginAction } from '../../Redux/loginRedux/loginAction'
 import { useNavigate } from 'react-router-dom'
 
