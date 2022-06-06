@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import Table from './Table/table'
+import ModalCall from './Modal/ModalCall'
 
 export const Button = (props) => {
     return(
@@ -19,19 +21,33 @@ export const Button = (props) => {
     )
 }
 
-const handleClick = (data) => () => {
-  console.log("Button Clicked",data)
-}
-
-const getContent = (rawData) => 
-        rawData.map(item => (
-          {
-            ...item, 
-            edit: <Button handleClick={handleClick(item)}/>
-          }
-))
       
 const Reports = () => {
+
+    const [mstate, setState]= useState(false)
+        const toggleModal = () => {
+        setState(!mstate)
+    }
+    const [userdata, setUser] = useState("")
+    const handleSubmit = (editdata) => {
+        console.log("Edited User Details - ",editdata)
+        setUser(editdata)
+    }
+
+    const handleClick = (data) => () => {
+        console.log("Button Clicked",data)
+        setUser(data)
+        setState(true)
+    }
+    
+    const getContent = (rawData) => 
+            rawData.map(item => (
+                {
+                ...item, 
+                edit: <Button handleClick={handleClick(item)}/>
+                }
+    ))
+
     const [appointmentList] = React.useState({
         headingLabel:[
             { label:'Token', keyValue:'token' },
@@ -85,6 +101,16 @@ const Reports = () => {
                 head={appointmentList.headingLabel} 
                 data={getContent(appointmentList.patientAppointmentsList)}
         />
+
+        <ModalCall
+            header="Patient Visit Details" 
+            shouldShowPopup = { mstate } 
+            toggleModal = { toggleModal }
+            userdata={userdata} 
+            handleSubmit={handleSubmit} 
+        />
+
+
     </div>
   )
 }

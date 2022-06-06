@@ -1,31 +1,40 @@
 .ascolumn {
     display: flex;
     flex-direction: column;
+    justify-content: left;
+    padding-bottom: 15px;
 }
 
 label {
     padding: 3px;
 }
 
-.normal {
+.input_outlined  {
     background-color: rgba(0, 0, 0, 0);
-    width: 100%;
+    width: 97%;
     height: 30px;
-    border: 1px;
+    border: 2px;
     border-radius: 5px;
     border-style: solid;
     border-color: gray;
     padding: 5px;
-}
-.normal:focus {
     outline: none;
 }
+.input_outlined:focus {
+    border-color: rgb(75, 75, 75);
+}
 
-/* .underline{
+.input_standard{
     background-color: rgba(0, 0, 0, 0);
-    width: 300px;
+    width: 97%;
     height: 30px;
     padding: 5px;
     border: none;
-    text-decoration-line: underline;
-} */
+    outline: none;
+    border-bottom: solid rgb(0, 32, 105);
+}
+
+.input_standard:focus {
+    border-bottom: solid rgb(10, 70, 209);
+    background-color: rgba(255, 255, 255, 0.4);
+}

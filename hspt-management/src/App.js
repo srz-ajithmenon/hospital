@@ -9,8 +9,7 @@ import ModalHome from './Components/Pages/Home';
 
 function App() {
   return (
-
-    <div className="App">
+    <div>
       <BrowserRouter>
         <div>
           <Routes>

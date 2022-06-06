@@ -1,36 +1,54 @@
 import React, { useState } from "react";
 
 import Modal from "../Modal/Modal";
+import Inputbox from "../Input/InputBox"
 
 function Home() {
     const [mstate, setState]= useState(false)
-    const handleSubmit = (udata) => {
-        console.log("User Details - ",udata)
-    }
     const toggleModal = () => {
         setState(!mstate)
     }
     const [udata, setUser] = useState({name:"",email:"", phone:""})
-    const handleChange = (event) => {
-        var name = event.target.name
-        setUser({ ...udata, [name]:event.target.value })
+    const handleChange = (val1,val2) => {
+        setUser({ ...udata, [val1]:val2 })
+    }
+    const handleSubmit = () => {
+        console.log("User Details - ",udata)
+        setUser({name:"",email:"", phone:""}) // after every use
     }
     const handleReset = () => {
         setUser({name:"",email:"", phone:""})
     }
     return (
         <div>
-            <p></p>
             <button onClick={toggleModal} >open Modal</button>
             {
-                <Modal header="My Modal" shouldShowPopup={mstate} content="This is my modal Component" toggleModal={toggleModal} handleSubmit={handleSubmit} handleReset={handleReset} >
+                <Modal header="My Modal" shouldShowPopup={mstate} toggleModal={toggleModal} handleSubmit={handleSubmit} handleReset={handleReset} >
 
-                        <label>Name</label><br/>
-                        <input type="text" name="name" value={udata.name} onChange={handleChange} /><br/><br/>
-                        <label>E-mail</label><br/>
-                        <input type="text" name="email" value={udata.email} onChange={handleChange} /><br/><br/>
-                        <label>Phone No.</label><br/>
-                        <input type="text" name="phone" value={udata.phone} onChange={handleChange} /><br/><br/>
+                    <Inputbox 
+                        type="text" 
+                        name="name" 
+                        label="Name" 
+                        placeholder="Enter your Name" 
+                        value = {udata.name}
+                        handleChange={handleChange} 
+                    /><br/>
+                    <Inputbox 
+                        type="text"
+                        name="email" 
+                        label="E-mail ID" 
+                        placeholder="Enter your E-mail ID" 
+                        value = {udata.email}
+                        handleChange={handleChange} 
+                    /><br/>
+                    <Inputbox 
+                        type="number" 
+                        name="phone"  
+                        label="Phone No." 
+                        placeholder="Enter your Phone No." 
+                        value = {udata.phone}
+                        handleChange={handleChange} 
+                    /><br/>
                        
                 </Modal>
             }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
+import Button from "../Button/SubmitButton";
 import './modal.css'
 
 function Modal(props) {
     
     const cancel = () => {
+        props.handleReset()
         props.toggleModal()
     }
     const handleReset = () => {
@@ -21,17 +23,16 @@ function Modal(props) {
     return (
         <div className="layover">
             <div className="content">
-                <div className="divcenter">
+                <div className="modalheader">
                     <h3>{ props.header }</h3>
-                    <p>{props.content}</p>
                 </div>
-                <div>
+                <div className="modalbody">
                   {props.children}
                 </div>
-                <div className="divright">
-                            <button onClick={handleSubmit} className="submit" >Submit</button>
-                            <button onClick={handleReset} className="reset" >Reset</button>
-                            <button onClick={cancel} className="cancel" >Cancel</button>
+                <div className="modalbutton">
+                            <Button handleClick={handleSubmit} varient="contained" label="Submit" />
+                            <Button handleClick={handleReset} varient="simple" label="Reset" />
+                            <Button handleClick={cancel} varient="outlined" label="Cancel" />
                 </div>
             </div>
         </div>
