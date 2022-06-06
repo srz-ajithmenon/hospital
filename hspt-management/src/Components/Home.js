@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Selectfields from "./selectFields";
+import Selectfields from "./SelectFields";
 import "../designs/design.css";
 
 function Home(props) {
