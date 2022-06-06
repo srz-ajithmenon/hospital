@@ -3,14 +3,6 @@ import React, { useState, useEffect } from "react";
 import Inputbox from "../Input/InputBox";
 import Modal from "./Modal";
 
-const formFields = [
-    {name: "token", label: "Token", type: "text"},
-    {name: "visit_date", label: "Visit Date", type: "text"},
-    {name: "specialist", label: "Specialist", type: "text"},
-    {name: "speciality", label: "Speciality", type: "text"},
-    {name: "reports", label: "Report", type: "text"}
-]
-
 function ModalCall(props) {
 
     useEffect(() => {
@@ -23,7 +15,6 @@ function ModalCall(props) {
     const handleChange = (val1,val2) => {
         setUser({ ...udata, [val1]:val2 })
     }
-    console.log(udata)
     const [temporary, setTemporary] = useState("")   
     const handleReset = () => {
         setUser(temporary)
@@ -42,7 +33,7 @@ function ModalCall(props) {
         >
             
             { 
-                formFields.map((item) => {
+                props.formFields.map((item) => {
                     return (
                         <Inputbox 
                             key={ item.name} 

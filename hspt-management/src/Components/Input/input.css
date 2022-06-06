@@ -11,7 +11,7 @@ label {
 
 .input_outlined  {
     background-color: rgba(0, 0, 0, 0);
-    width: 97%;
+    width: inherit;
     height: 30px;
     border: 2px;
     border-radius: 5px;

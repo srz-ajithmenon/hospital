@@ -1,0 +1,11 @@
+.modallabels {
+    width: 100%;
+    background-color: rgb(171, 171, 171);
+}
+.divider {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    width: inherit;
+    padding: 20px;
+}

@@ -34,6 +34,14 @@ const Reports = () => {
         setUser(editdata)
     }
 
+    const formFields = [
+      {name: "token", label: "Token", type: "text"},
+      {name: "visit_date", label: "Visit Date", type: "text"},
+      {name: "specialist", label: "Specialist", type: "text"},
+      {name: "speciality", label: "Speciality", type: "text"},
+      {name: "reports", label: "Report", type: "text"}
+    ]
+
     const handleClick = (data) => () => {
         console.log("Button Clicked",data)
         setUser(data)
@@ -106,7 +114,8 @@ const Reports = () => {
             header="Patient Visit Details" 
             shouldShowPopup = { mstate } 
             toggleModal = { toggleModal }
-            userdata={userdata} 
+            userdata={userdata}
+            formFields = {formFields}
             handleSubmit={handleSubmit} 
         />
 
