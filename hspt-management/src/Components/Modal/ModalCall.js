@@ -15,7 +15,6 @@ function ModalCall(props) {
     const handleChange = (val1,val2) => {
         setUser({ ...udata, [val1]:val2 })
     }
-    console.log(udata)
     const [temporary, setTemporary] = useState("")   
     const handleReset = () => {
         setUser(temporary)
