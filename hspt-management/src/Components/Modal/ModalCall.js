@@ -34,7 +34,7 @@ function ModalCall(props) {
         >
             
             { 
-                formFields.map((item) => {
+                props.formFields.map((item) => {
                     return (
                         <Inputbox 
                             key={ item.name} 
