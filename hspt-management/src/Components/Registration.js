@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-import Inputbox from "./Input/InputBox";
-import SubmitButton from "./Button/SubmitButton";
+import Inputbox from "./input/inputBox";
+import SubmitButton from "./button/submitButton";
 import '../designs/pages.css'
 
 function Registration(props) {

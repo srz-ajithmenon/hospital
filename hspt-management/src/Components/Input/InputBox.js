@@ -18,6 +18,9 @@ function Inputbox(props) {
                 className={props.varient || "input_outlined" }
                 onChange={handleChange}
             />
+            <div>
+            {props.errorMsg}
+            </div>
         </div>
     );
 }
