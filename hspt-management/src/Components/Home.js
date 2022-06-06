@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Selectfields from "./Selectfields";
-import "../Design/design.css";
+import Selectfields from "./selectFields";
+import "../designs/design.css";
 
 function Home(props) {
     const[sdata,setupdate]=useState ({
@@ -21,7 +21,7 @@ function Home(props) {
       {label:"Spain", value:"spain"},
       {label:"Russia", value:"russia"}
      ]
-    console.log(sdata)
+     
      return (
        <div className="main">
          <div className="formpart">
