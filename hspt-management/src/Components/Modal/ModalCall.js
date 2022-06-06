@@ -3,14 +3,6 @@ import React, { useState, useEffect } from "react";
 import Inputbox from "../Input/InputBox";
 import Modal from "./Modal";
 
-const formFields = [
-    {name: "token", label: "Token", type: "text"},
-    {name: "visit_date", label: "Visit Date", type: "text"},
-    {name: "specialist", label: "Specialist", type: "text"},
-    {name: "speciality", label: "Speciality", type: "text"},
-    {name: "reports", label: "Report", type: "text"}
-]
-
 function ModalCall(props) {
 
     useEffect(() => {
