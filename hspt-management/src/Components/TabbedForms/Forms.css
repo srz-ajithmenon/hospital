@@ -1,5 +1,5 @@
 .modallabels {
-    width: 100%;
+    width: inherit;
     background-color: rgb(171, 171, 171);
 }
 .divider {

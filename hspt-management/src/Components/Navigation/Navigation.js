@@ -13,7 +13,7 @@ function Navigation (props) {
             <ul>
                 {nav.map(function(item){
                     return (
-                    <li><Link to={item.value}>{item.label}</Link></li>
+                    <li key={item.label}><Link to={item.value}>{item.label}</Link></li>
                     )}
                   )
                 }

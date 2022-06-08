@@ -10,7 +10,6 @@ import Registration from './Components/Registration';
 import Reports from './Components/reports';
 import ModalHome from './Components/Pages/Home';
 import Navigation from './Components/Navigation/Navigation';
-import SecondModal from './Components/TabbedForms/SecondForm'
 
 function App() {
   const [isAuth,setAuth] = React.useState(false);

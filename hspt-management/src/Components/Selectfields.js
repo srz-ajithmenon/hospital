@@ -15,7 +15,7 @@ function Selectfields (props) {
             <option value="">--select--</option>
             {props.items.map(function(item){
               return (
-                  <option value={item.value}>{item.label}</option>
+                  <option key={item.label} value={item.value}>{item.label}</option>
                      )
                 })
             }

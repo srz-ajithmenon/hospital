@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import Selectfields from "./Selectfields";
+import Selectfields from "./SelectFields";
+import SubmitButton from './Button/SubmitButton'
+import ModalForms from "./TabbedForms/ModalForm";
 import "../designs/design.css";
 
 function Home(props) {
@@ -21,6 +23,17 @@ function Home(props) {
       {label:"Spain", value:"spain"},
       {label:"Russia", value:"russia"}
      ]
+    const handleSubmit = (user) => {
+      console.log(user)
+    }
+    const [mstate, setState]= useState(false)
+    const toggleModal = () => {
+    setState(!mstate)
+    }
+    const handleClick = () => {
+        console.log("Button Clicked")
+        setState(true)
+    }
      
      return (
        <div className="main">
@@ -34,6 +47,14 @@ function Home(props) {
                </div>
             </div>
          </div>
+         <hr/>
+              <SubmitButton handleClick={handleClick} varient="contained" label="Tabbed Modal" />
+              <ModalForms
+                  header="Tabbed Modal" 
+                  shouldShowPopup = { mstate } 
+                  toggleModal = { toggleModal }
+                  handleSubmit={handleSubmit} 
+              />
        </div> 
     )
 }
