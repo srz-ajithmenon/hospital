@@ -9,7 +9,7 @@ function FirstForm (props) {
     // })
 
     // const handleChange = (val1,val2) =>{ setUpdate({ ...firstdata, [val2]:val1 }) }
-    // console.log("*******",firstdata)
+    console.log("*******",props.udata.status)
     
     return (
         <div>
@@ -29,7 +29,7 @@ function FirstForm (props) {
                             value= {props.udata.status}
                         />
                         <Inputbox 
-                            type="number" 
+                            type="text" 
                             name="reason" 
                             placeholder="" 
                             label="Reason" 
@@ -43,7 +43,7 @@ function FirstForm (props) {
                     </div>
                     <div className="divider">    
                         <Inputbox 
-                            type="number" 
+                            type="text" 
                             name="firstdate" 
                             placeholder="" 
                             label="Start Date" 

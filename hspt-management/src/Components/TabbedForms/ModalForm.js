@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import TabForms from '../TabbedForms/TabForms'
+import FirstForm from './FirstForm'
+import SecondForm from './SecondForm'
+import ThirdForm from './ThirdForm'
+import Tab from './Tab'
 import Modal from '../Modal/Modal'
 
 const user ={
@@ -10,7 +13,7 @@ const user ={
 
 function ModalForms(props) {
 
-    const [udata, setUser] = useState(user)
+    const [udata, setUser] = useState("")
     const handleChange = (val1,val2) => {
         setUser({ ...udata, [val1]:val2 })
     }
@@ -21,6 +24,15 @@ function ModalForms(props) {
         props.handleSubmit(udata)
         handleReset()
     }
+    const [toggleState, setToggleState] = useState("tab1");
+    const handleToggle = (index) => {
+        setToggleState(index);
+    };
+    const items = [
+        {name: "tab1", label: "Tab 1", content : <FirstForm udata={udata} handleChange={handleChange} /> },
+        {name: "tab2", label: "Tab 2", content : <SecondForm udata={udata} handleChange={handleChange} /> },
+        {name: "tab3", label: "Tab 3", content : <ThirdForm udata={udata} handleChange={handleChange} /> }
+    ]
 
     return (
         <Modal 
@@ -31,7 +43,11 @@ function ModalForms(props) {
             handleReset = {handleReset} 
         >
             { 
-                <TabForms udata={udata} handleChange={handleChange} />
+                <Tab
+                    items = {items}
+                    handleToggle={handleToggle}
+                    tstate= {toggleState}
+                />
             }
         </Modal>
     );

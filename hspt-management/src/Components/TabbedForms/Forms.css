@@ -1,6 +1,7 @@
 .modallabels {
     width: inherit;
-    background-color: rgb(171, 171, 171);
+    background-color: rgba(55, 1, 1, 0.727);
+    color: white;
 }
 .divider {
     display: grid;

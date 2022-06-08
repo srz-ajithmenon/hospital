@@ -28,7 +28,7 @@ function ThirdForm (props) {
                         value= {props.udata.address}
                     />
                     <Inputbox 
-                        type="number" 
+                        type="text" 
                         name="city" 
                         placeholder="" 
                         label="City" 

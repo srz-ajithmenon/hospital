@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Selectfields from "./SelectFields";
+import Selectfields from "./Selectfields";
 import SubmitButton from './Button/SubmitButton'
 import ModalForms from "./TabbedForms/ModalForm";
 import "../designs/design.css";

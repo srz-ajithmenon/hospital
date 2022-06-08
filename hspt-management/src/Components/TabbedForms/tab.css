@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    width: inherit;
+    min-width: 600px;
     height: inherit;
     background: #9c9c9c;
     word-break: break-all;
@@ -18,13 +18,14 @@
     padding: 15px;
     text-align: center;
     width: 100%;
-    background: rgba(128, 128, 128, 0.075);
-    border: 1px solid rgba(0, 0, 0, 0.274);
+    background: rgb(0, 26, 66);
+    color: white;
+    border: 1px solid rgb(182, 179, 179);
   }
   
   .active-tabs  {
-    background: white;
-    border-bottom: 1px solid transparent;
+    background: rgb(0, 55, 255);
+    border: 1px solid rgb(0, 55, 255);
   }
   
   .content-tabs {
@@ -32,13 +33,4 @@
     flex-grow : 1;
     height: 430px;
     overflow-y: auto;
-  }
-  .tabcontent {
-    padding: 5px;
-    width: inherit;
-    display: none;
-  }
-  
-  .active-content {
-    display: block;
   }

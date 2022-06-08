@@ -28,7 +28,7 @@ function SecondForm (props) {
                         value= {props.udata.firstname}
                     />
                     <Inputbox 
-                        type="number" 
+                        type="text" 
                         name="lastname" 
                         placeholder="" 
                         label="Second Name" 
