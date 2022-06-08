@@ -87,5 +87,151 @@
     {
       "id": 21
     }
+  ],
+  "doctorsList": [
+    {
+      "doctors_id": "71",
+      "doctors_name": "Dr. Ayesha Arjumand",
+      "consult_fee": "0.000",
+      "department_id": "29",
+      "department_name": "General Practitioner",
+      "clinician_code": "P12163",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr. Ayesha Arjumand - General Practitioner - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "72",
+      "doctors_name": "Dr. Naghma Quazi",
+      "consult_fee": "0.000",
+      "department_id": "29",
+      "department_name": "General Practitioner",
+      "clinician_code": "",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr. Naghma Quazi - General Practitioner - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "73",
+      "doctors_name": "Dr. Cryscel Anne Salonga Ramos",
+      "consult_fee": "0.000",
+      "department_id": "29",
+      "department_name": "General Practitioner",
+      "clinician_code": "TP114660",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr. Cryscel Anne Salonga Ramos - General Practitioner - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "74",
+      "doctors_name": "Dr. Binish Aqeel",
+      "consult_fee": "0.000",
+      "department_id": "29",
+      "department_name": "General Practitioner",
+      "clinician_code": "TP115939",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr. Binish Aqeel - General Practitioner - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "75",
+      "doctors_name": "Dr.Kurumthottical Mathew Rooney Mathew ",
+      "consult_fee": "0.000",
+      "department_id": "28",
+      "department_name": "General Surgery",
+      "clinician_code": "P764",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr.Kurumthottical Mathew Rooney Mathew  - General Surgery - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "76",
+      "doctors_name": "Dr. Zia Ansari",
+      "consult_fee": "0.000",
+      "department_id": "28",
+      "department_name": "General Surgery",
+      "clinician_code": "TP114818",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr. Zia Ansari - General Surgery - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "77",
+      "doctors_name": "Dr. Radhika Rani Suprakasan",
+      "consult_fee": "0.000",
+      "department_id": "30",
+      "department_name": "Internal Medicine",
+      "clinician_code": "P5704",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr. Radhika Rani Suprakasan - Internal Medicine - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "78",
+      "doctors_name": "Dr. Raveendran Somanatha Panicker",
+      "consult_fee": "0.000",
+      "department_id": "30",
+      "department_name": "Internal Medicine",
+      "clinician_code": "P9554",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr. Raveendran Somanatha Panicker - Internal Medicine - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "79",
+      "doctors_name": "Dr. Sathisha Basrur Krishna Naik",
+      "consult_fee": "0.000",
+      "department_id": "30",
+      "department_name": "Internal Medicine",
+      "clinician_code": "P12331",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr. Sathisha Basrur Krishna Naik - Internal Medicine - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "80",
+      "doctors_name": "Dr. Sadam Mansor Al Zoobi",
+      "consult_fee": "0.000",
+      "department_id": "31",
+      "department_name": "Dental",
+      "clinician_code": "D788",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr. Sadam Mansor Al Zoobi - Dental - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "81",
+      "doctors_name": "Dr.Jawaher Mutahar Ali Murad",
+      "consult_fee": "0.000",
+      "department_id": "31",
+      "department_name": "Dental",
+      "clinician_code": "D5154",
+      "doctor_type": "GP",
+      "active_status": "Y",
+      "office_Name": "Dr.Jawaher Mutahar Ali Murad - Dental - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    },
+    {
+      "doctors_id": "82",
+      "doctors_name": "Dr. Suprakasan Sukumaran",
+      "consult_fee": "0.000",
+      "department_id": "36",
+      "department_name": "Dermatology",
+      "clinician_code": "P5689",
+      "doctor_type": "Specialist",
+      "active_status": "Y",
+      "office_Name": "Dr. Suprakasan Sukumaran - Dermatology - KIMS Qatar Medical Centre, Wakra",
+      "office_id": "4"
+    }
   ]
 }
