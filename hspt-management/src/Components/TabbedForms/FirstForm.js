@@ -4,7 +4,7 @@ import Inputbox from "../Input/InputBox";
 import "./Forms.css"
 
 function FirstForm (props) {
-    
+    console.log("++++++++++++",props.udata)
     return (
         <div>
             <div>  

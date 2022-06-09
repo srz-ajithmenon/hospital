@@ -14,7 +14,7 @@ function Inputbox(props) {
                 type={props.type} 
                 name={props.name} 
                 placeholder={props.placeholder} 
-                value = {props.value || ""}
+                value = {props.value}
                 className={props.varient || "input_outlined" }
                 onChange={handleChange}
             />

@@ -13,10 +13,11 @@ const user ={
 
 function ModalForms(props) {
 
-    const [udata, setUser] = useState("")
+    const [udata, setUser] = useState({})
     const handleChange = (val1,val2) => {
-        setUser({ ...udata, [val1]:val2 })
+        setUser((prevoiusData)=>({ ...prevoiusData, [val1]:val2 }))
     }
+    // console.log("~~~~~~",udata)
     const handleReset = () => {
         setUser(user)
     }
@@ -28,12 +29,15 @@ function ModalForms(props) {
     const handleToggle = (index) => {
         setToggleState(index);
     };
-    const items = [
-        {name: "tab1", label: "Tab 1", content : <FirstForm udata={udata} handleChange={handleChange} /> },
-        {name: "tab2", label: "Tab 2", content : <SecondForm udata={udata} handleChange={handleChange} /> },
-        {name: "tab3", label: "Tab 3", content : <ThirdForm udata={udata} handleChange={handleChange} /> }
-    ]
-
+    const items = (userdata) => {
+        console.log("..........",userdata)
+        return (
+        [
+            {name: "tab1", label: "Tab 1", content : <FirstForm udata={userdata} handleChange={handleChange} /> },
+            {name: "tab2", label: "Tab 2", content : <SecondForm udata={userdata} handleChange={handleChange} /> },
+            {name: "tab3", label: "Tab 3", content : <ThirdForm udata={userdata} handleChange={handleChange} /> }
+        ]
+    )}
     return (
         <Modal 
             header = {props.header}
@@ -44,7 +48,7 @@ function ModalForms(props) {
         >
             { 
                 <Tab
-                    items = {items}
+                    items = {items(udata)}
                     handleToggle={handleToggle}
                     tstate= {toggleState}
                 />
