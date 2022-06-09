@@ -1,5 +1,7 @@
-import React from 'react'
-import Table from './table/table'
+import React, { useState } from 'react'
+
+import Table from './Table/table'
+import ModalCall from './Modal/ModalCall'
 
 export const Button = (props) => {
     return(
@@ -19,19 +21,41 @@ export const Button = (props) => {
     )
 }
 
-const handleClick = (data) => () => {
-  console.log("Button Clicked",data)
-}
-
-const getContent = (rawData) => 
-        rawData.map(item => (
-          {
-            ...item, 
-            edit: <Button handleClick={handleClick(item)}/>
-          }
-))
       
 const Reports = () => {
+
+    const [mstate, setState]= useState(false)
+        const toggleModal = () => {
+        setState(!mstate)
+    }
+    const [userdata, setUser] = useState("")
+    const handleSubmit = (editdata) => {
+        console.log("Edited User Details - ",editdata)
+        setUser(editdata)
+    }
+
+    const formFields = [
+        {name: "token", label: "Token", type: "text"},
+        {name: "visit_date", label: "Visit Date", type: "text"},
+        {name: "specialist", label: "Specialist", type: "text"},
+        {name: "speciality", label: "Speciality", type: "text"},
+        {name: "reports", label: "Report", type: "text"}
+    ]
+    
+    const handleClick = (data) => () => {
+        console.log("Button Clicked",data)
+        setUser(data)
+        setState(true)
+    }
+    
+    const getContent = (rawData) => 
+            rawData.map(item => (
+                {
+                ...item, 
+                edit: <Button handleClick={handleClick(item)}/>
+                }
+    ))
+
     const [appointmentList] = React.useState({
         headingLabel:[
             { label:'Token', keyValue:'token' },
@@ -85,6 +109,17 @@ const Reports = () => {
                 head={appointmentList.headingLabel} 
                 data={getContent(appointmentList.patientAppointmentsList)}
         />
+
+        <ModalCall
+            header="Patient Visit Details" 
+            shouldShowPopup = { mstate } 
+            toggleModal = { toggleModal }
+            userdata={userdata} 
+            formFields={formFields}
+            handleSubmit={handleSubmit} 
+        />
+
+
     </div>
   )
 }

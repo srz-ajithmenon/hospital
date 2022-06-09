@@ -1,14 +1,15 @@
 import './App.css';
-
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
-import Home from './components/home';
-import Registration from './components/registration';
-import Reports from './components/reports';
-import Login from './components/login/login';
-import { PrivateRoute } from './components/privateRoute';
+import Login from './Components/login/login';
+import { PrivateRoute } from './Components/privateRoute';
+import Home from './Components/Home';
+import Registration from './Components/Registration';
+import Reports from './Components/reports';
+import ModalHome from './Components/Pages/Home';
+import Navigation from './Components/Navigation/Navigation';
 
 function App() {
   const [isAuth,setAuth] = React.useState(false);
@@ -23,7 +24,8 @@ function App() {
       <div>
         {console.log(isAuth)}
         <BrowserRouter>
-          <div>
+        <Navigation/>
+          <div className='main'>
             <Routes>
               <Route exact path='/' element={<PrivateRoute isAuth={isAuth}/>}>
                 <Route exact path='/report' element={<Reports/>}/>
@@ -31,11 +33,12 @@ function App() {
               <Route path = "/login" element={ <Login handleAuth= {authenticate}/> } />
               <Route path = "/register" element={ <Registration/> } />
               <Route exact path = "/home" element={ <Home/> } />
+              {/* <Route path = "/modal" element={ <ModalHome /> } /> */}
             </Routes>
           </div>
         </BrowserRouter>
       </div>
-    </Provider>  
+    </Provider>
   );
 }
 
