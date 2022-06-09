@@ -48,7 +48,7 @@ function Home(props) {
             </div>
          </div>
          <hr/>
-              <SubmitButton handleClick={handleClick} varient="contained" label="Tabbed Modal" />
+              <SubmitButton handleClick={toggleModal} varient="contained" label="Tabbed Modal" />
               <ModalForms
                   header="Tabbed Modal" 
                   shouldShowPopup = { mstate } 
