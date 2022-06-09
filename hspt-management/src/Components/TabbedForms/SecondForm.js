@@ -4,13 +4,7 @@ import Inputbox from "../Input/InputBox";
 import "./Forms.css"
 
 function SecondForm (props) {
-    // const [seconddata,setUpdate]=useState({ 
-    //     firstname:"", lastname:"", phone:"", email:"", gender:"", height:"", identify:""
-    // })
 
-    // const handleChange = (val1,val2) =>{ setUpdate({ ...seconddata, [val2]:val1 }) }
-    // console.log("*******",seconddata)
-    
     return (
         <div>
             <div>
@@ -23,7 +17,6 @@ function SecondForm (props) {
                         name="firstname" 
                         placeholder="" 
                         label="First Name" 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.firstname}
                     />
@@ -32,7 +25,6 @@ function SecondForm (props) {
                         name="lastname" 
                         placeholder="" 
                         label="Second Name" 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.lastname}
                     />
@@ -46,7 +38,6 @@ function SecondForm (props) {
                         name="phone" 
                         placeholder="" 
                         label="Phone No." 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.phone}
                     />
@@ -55,7 +46,6 @@ function SecondForm (props) {
                         name="email" 
                         placeholder="" 
                         label="E-mail ID."
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.email}
                     />
@@ -69,7 +59,6 @@ function SecondForm (props) {
                         name="gender" 
                         placeholder="" 
                         label="Gender" 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.gender}
                     />
@@ -78,7 +67,6 @@ function SecondForm (props) {
                         name="height" 
                         placeholder="" 
                         label="height (in cm)" 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.height}
                     />
@@ -92,7 +80,6 @@ function SecondForm (props) {
                         name="identify" 
                         placeholder="" 
                         label="Identify Mark" 
-                        // handleChange={handleChange}
                         handleChange={props.handleChange}
                         value= {props.udata.identify}
                     />

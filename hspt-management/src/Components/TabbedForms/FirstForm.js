@@ -4,12 +4,6 @@ import Inputbox from "../Input/InputBox";
 import "./Forms.css"
 
 function FirstForm (props) {
-    // const [firstdata,setUpdate]=useState({ 
-    //     status:"", reason:"", firstdate:"", startdate:"", enddate:"", type:""
-    // })
-
-    // const handleChange = (val1,val2) =>{ setUpdate({ ...firstdata, [val2]:val1 }) }
-    console.log("*******",props.udata.status)
     
     return (
         <div>
@@ -24,7 +18,6 @@ function FirstForm (props) {
                             name="status" 
                             placeholder="" 
                             label="Status" 
-                            // handleChange={handleChange}
                             handleChange={props.handleChange}
                             value= {props.udata.status}
                         />
@@ -33,7 +26,6 @@ function FirstForm (props) {
                             name="reason" 
                             placeholder="" 
                             label="Reason" 
-                            // handleChange={handleChange}
                             handleChange={props.handleChange}
                             value= {props.udata.reason}
                         />
@@ -47,7 +39,6 @@ function FirstForm (props) {
                             name="firstdate" 
                             placeholder="" 
                             label="Start Date" 
-                            // handleChange={handleChange}
                             handleChange={props.handleChange}
                             value= {props.udata.firstdate}
                         />
@@ -61,7 +52,6 @@ function FirstForm (props) {
                             name="startdate" 
                             placeholder="" 
                             label="Start Date" 
-                            // handleChange={handleChange}
                             handleChange={props.handleChange}
                             value= {props.udata.startdate}
                         />
@@ -70,7 +60,6 @@ function FirstForm (props) {
                             name="enddate" 
                             placeholder="" 
                             label="End Date" 
-                            // handleChange={handleChange}
                             handleChange={props.handleChange}
                             value= {props.udata.enddate}
                         />
@@ -84,7 +73,6 @@ function FirstForm (props) {
                             name="type" 
                             placeholder="" 
                             label="Type" 
-                            // handleChange={handleChange} 
                             handleChange={props.handleChange}
                             value= {props.udata.type}
                         />

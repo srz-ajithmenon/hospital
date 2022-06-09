@@ -30,12 +30,8 @@ function Home(props) {
     const toggleModal = () => {
     setState(!mstate)
     }
-    const handleClick = () => {
-        console.log("Button Clicked")
-        setState(true)
-    }
-     
-     return (
+
+    return (
        <div className="main">
          <div className="formpart">
            <div>
