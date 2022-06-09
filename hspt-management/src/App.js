@@ -10,6 +10,7 @@ import Registration from './Components/Registration';
 import Reports from './Components/reports';
 import ModalHome from './Components/Pages/Home';
 import Navigation from './Components/Navigation/Navigation';
+import DisplayDoctors from './Components/Pages/DisplayDoctors';
 
 function App() {
   const [isAuth,setAuth] = React.useState(false);
@@ -33,7 +34,7 @@ function App() {
               <Route path = "/login" element={ <Login handleAuth= {authenticate}/> } />
               <Route path = "/register" element={ <Registration/> } />
               <Route exact path = "/home" element={ <Home/> } />
-              {/* <Route path = "/modal" element={ <ModalHome /> } /> */}
+              <Route path = "/doctors" element={ <DisplayDoctors /> } />
             </Routes>
           </div>
         </BrowserRouter>
