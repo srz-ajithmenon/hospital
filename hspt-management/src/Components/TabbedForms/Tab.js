@@ -2,10 +2,7 @@ import React,{ useEffect, useState } from "react";
 import "./tab.css";
 
 function Tabs(props) {
-  const [content, setContent] = useState()
-  useEffect(() => {
-      setContent((props.items.find( (item) => item.name == props.tstate)).content)
-  },[props.tstate]);
+  const content = props.items.find( (item) => item.name == props.tstate).content
     
   return (
     <div className="container">

@@ -13,11 +13,10 @@ const user ={
 
 function ModalForms(props) {
 
-    const [udata, setUser] = useState({})
+    const [udata, setUser] = useState(user)
     const handleChange = (val1,val2) => {
         setUser((prevoiusData)=>({ ...prevoiusData, [val1]:val2 }))
     }
-    // console.log("~~~~~~",udata)
     const handleReset = () => {
         setUser(user)
     }
@@ -30,7 +29,6 @@ function ModalForms(props) {
         setToggleState(index);
     };
     const items = (userdata) => {
-        console.log("..........",userdata)
         return (
         [
             {name: "tab1", label: "Tab 1", content : <FirstForm udata={userdata} handleChange={handleChange} /> },
