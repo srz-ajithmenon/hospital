@@ -24,7 +24,7 @@
     padding: 10px;
     width: 100%;
     background-color: rgb(228, 202, 165);
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
