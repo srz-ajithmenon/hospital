@@ -62,7 +62,6 @@ const validate = (event, name, value) => {
             ...user,
             [name]:val,
         })
-        console.log(user)
     }
 
     const handleSubmitVal = (event) => {
@@ -75,12 +74,12 @@ const validate = (event, name, value) => {
         }
     }
 
-
     return {
         user,
         errors,
         handleChangeVal,
-        handleSubmitVal
+        handleSubmitVal,
+        validate
     }
 }
 

@@ -38,3 +38,7 @@ label {
     border-bottom: solid rgb(10, 70, 209);
     background-color: rgba(255, 255, 255, 0.4);
 }
+
+.errorMsg{
+    color:red;
+}

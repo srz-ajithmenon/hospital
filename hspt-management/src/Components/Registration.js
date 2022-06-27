@@ -19,7 +19,8 @@ function Registration(props) {
                     <Inputbox
                         type="text" 
                         name="name" 
-                        label="Name" 
+                        label="Name"
+                        value={udata.name} 
                         placeholder="Enter your Name" 
                         handleChange={handleChange} 
                     /> <br/>

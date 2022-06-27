@@ -30,7 +30,6 @@ const Reports = () => {
     }
     const [userdata, setUser] = useState("")
     const handleSubmit = (editdata) => {
-        console.log("Edited User Details - ",editdata)
         setUser(editdata)
     }
 
@@ -43,7 +42,6 @@ const Reports = () => {
     ]
     
     const handleClick = (data) => () => {
-        console.log("Button Clicked",data)
         setUser(data)
         setState(true)
     }

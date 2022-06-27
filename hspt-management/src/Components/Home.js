@@ -9,7 +9,6 @@ function Home(props) {
         })
     const handleChange=(value1, value2)=>
                 {setupdate({...sdata, [value2]:value1})
-                console.log(value1, value2)
         }
     const gender=[
       {label:"Male", value:"male"},

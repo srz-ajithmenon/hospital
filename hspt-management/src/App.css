@@ -1,3 +1,6 @@
+body{
+  margin: 0%;
+}
 h2{
   color:#797b80;
   margin: 3%;
@@ -13,6 +16,7 @@ h2{
 #tableId td, #tableId th {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
 
 #tableId tr:nth-child(even){background-color: #f2f2f2;}

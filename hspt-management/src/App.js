@@ -8,32 +8,24 @@ import { PrivateRoute } from './Components/privateRoute';
 import Home from './Components/Home';
 import Registration from './Components/Registration';
 import Reports from './Components/reports';
-import ModalHome from './Components/Pages/Home';
-import Navigation from './Components/Navigation/Navigation';
+import Logout from './Components/Logout/Logout';
+import Visitor from './Components/Visitor/Visitor';
 
 function App() {
-  const [isAuth,setAuth] = React.useState(false);
-  
-  const authenticate = (isAuthUser) =>{
-      setAuth(isAuthUser)
-      console.log(isAuthUser)
-  }
-  
   return (
     <Provider store={store}>
       <div>
-        {console.log(isAuth)}
         <BrowserRouter>
-        <Navigation/>
           <div className='main'>
             <Routes>
-              <Route exact path='/' element={<PrivateRoute isAuth={isAuth}/>}>
-                <Route exact path='/report' element={<Reports/>}/>
+              <Route path = "/login" element={ <Login /> } />
+              <Route exact path='/' element={<PrivateRoute />}>
+                  <Route exact path='/report' element={<Reports/>}/>
+                  <Route exact path = "/register" element={ <Registration/> } />
+                  <Route exact path = "/home" element={ <Home/> } />
+                  <Route path= '/logout' element= { <Logout />} />
               </Route>
-              <Route path = "/login" element={ <Login handleAuth= {authenticate}/> } />
-              <Route path = "/register" element={ <Registration/> } />
-              <Route exact path = "/home" element={ <Home/> } />
-              {/* <Route path = "/modal" element={ <ModalHome /> } /> */}
+              <Route path="/visitors" element= { <Visitor/>} />
             </Routes>
           </div>
         </BrowserRouter>

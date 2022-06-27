@@ -4,19 +4,27 @@ import Input from '../Input/InputBox'
 import Button from '../Button/SubmitButton'
 import { loginAction } from '../../Redux/loginRedux/loginAction'
 import { useNavigate } from 'react-router-dom'
+import { omit } from 'lodash'
 
 import '../../designs/login.css'
 
 const Login = (props) => {
-  const [user,setUser] = React.useState({})
+  const [user,setUser] = React.useState({
+    name:"",
+    password:""
+  })
   const [error,setError] =React.useState(
-    {name:"This field is required"}
-    )
+    {
+      name:"The field is required ",
+      password:"The field is required "
+    })
   const navigate= useNavigate()
 
   const handleClick = () => {
-    //validation fun call
-    props.loginAction(user);
+    if( Object.keys(error).length === 0 && Object.keys(user).length !== 0)
+    {
+      props.loginAction(user);
+    }
   }
 
   const handleChange = (name, value) => {
@@ -24,19 +32,53 @@ const Login = (props) => {
       ...user,
       [name]: value,
     })
+
+    switch(name){
+      case 'name': 
+        if(value === ""){
+          setError({
+            ...error,
+            name: "The field is required"
+          })
+        }
+        else if(!new RegExp(/^[a-zA-Z][a-zA-Z0-9]{0,}(_|-| )?[a-zA-Z0-9]+$/).test(value)){
+          setError({
+            ...error,
+            name:"Enter a valid username"
+          })
+        }else{
+          let newObj = omit(error, 'name');
+          setError(newObj);
+        }
+        break;
+      
+      case 'password': 
+        if(value === ""){
+          setError({
+            ...error,
+            password: "The field is required"
+          })
+        }
+        else{
+          let newObj = omit(error, 'password');
+          setError(newObj);
+        }
+      break;
+      default:
+        break;
+    }
   }
 
-  if(props.isAuthUser){
-    localStorage.setItem('user',props.userRes.name)
-    localStorage.setItem('isAuth',true)
-    props.handleAuth(props.isAuthUser)
-    navigate('/report')
-  }
+  React.useEffect( () => {
+    if(props.isAuth ){
+      navigate('/report')
+    }
+  },
+  [localStorage.getItem('isAuth')])
   
   return (
     <div className='classLogin'>
       <h1>Login</h1>
-      {console.log(props.isAuthUser)}
       <div className='componentDiv'>
         <Input 
           type="text" 
@@ -52,6 +94,8 @@ const Login = (props) => {
         <Input 
           type="password" 
           name="password" 
+          value={user.password}
+          errorMsg= {error.password}
           label="Password" 
           placeholder="Enter password" 
           handleChange={handleChange}
@@ -72,7 +116,7 @@ const mapStateToProps = (state) => {
   return{
     userRes: state.loginReducer.user,
     type: state.loginReducer.type,
-    isAuthUser: state.loginReducer.isAuthUser
+    isAuth: state.loginReducer.isAuth
   }
 }
 
